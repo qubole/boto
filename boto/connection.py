@@ -858,7 +858,7 @@ class AWSAuthConnection(object):
         return path
 
     def get_proxy_auth_header(self):
-        auth = encodebytes(self.proxy_user + ':' + self.proxy_pass)
+        auth = encodebytes((self.proxy_user + ':' + self.proxy_pass).encode()).decode()
         return {'Proxy-Authorization': 'Basic %s' % auth}
 
     # For passing proxy information to other connection libraries, e.g. cloudsearch2

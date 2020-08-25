@@ -1,0 +1,6 @@
+boto v2.38.1
+============
+
+:date: 2020/08/25
+
+This release adds support for python3 in get_proxy_auth_header method.
